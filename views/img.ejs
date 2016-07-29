@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <link rel="stylesheet" href="css/base.css" />
+   
+   <script src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
+
+
+	<script>
+	var APP_ID = 'B5H8pR6I1J512orhgMlEWff2-gzGzoHsz';
+
+var APP_KEY = 'RyJCyanWqdCvrEfY1gNjBoD8';
+
+// 初始化
+	AV.init({
+  appId: APP_ID,
+  appKey: APP_KEY
+});
+
+		function useCloudFun(){
+		
+			var paramsJson = {
+			  "movie": "夏洛特烦恼"
+			};
+			alert("rty");
+			AV.Cloud.run('cloudgod', paramsJson, {
+			  success: function(data) {
+				// 调用成功，得到成功的应答 data
+				alert("123"+data)
+			  },
+			  error: function(err) {
+				// 处理调用失败
+				alert("345"+err.toString());
+			  }
+			});
+		}
+	</script>
+  </head>
+  <body>
+  <h1>LeanEngine-yanjm</h1>
+    <p>这是 LeanEngine-yanjm 修改的示例应用</p>
+<div class="fullbg">
+	<span>Nodejs,周杰棍的双节伦，~~~~~~~~~~~~~~~~~~~~~</span>
+
+	
+	
+	<br>
+</div>
+<input type="button" onclick="useCloudFun()" value="useCloudFun" />
+
+</body>
+</html>
